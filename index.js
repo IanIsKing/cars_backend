@@ -2,7 +2,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "cars_frontend/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(
+      path.resolve(__dirname, "cars_frontend", "build", "index.html")
+    );
+  });
+}
 
 app.use(bodyParser.json());
 
