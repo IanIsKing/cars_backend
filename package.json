@@ -1,0 +1,18 @@
+{
+  "name": "cars_api",
+  "version": "1.0.0",
+  "description": "a Restful API using Express that will allow the user to store a list of",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "author": "Ian Basson",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
