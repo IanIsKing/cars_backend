@@ -29,7 +29,6 @@ function getCar() {
 app.get("/api", (req, res) => {
   let cars = getCar();
   res.send(cars);
-  console.log(cars);
 });
 
 // Add a new car
